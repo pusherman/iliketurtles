@@ -1,0 +1,20 @@
+{
+  "name": "i like turtles",
+  "version": "0.2",
+  "description": "Have a cute little turtle join you while you browse the Interwwz.  He will come out and say hi every now and then.  He loves you.",
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+
+  "options_page": "fancy-settings/source/index.html",
+  "permissions": [ "http://*/*" ],
+  "background_page": "background.html",
+
+  "content_scripts": [ {
+    "js": [ "jquery.js", "content.js" ],
+    "matches": [ "http://*/*", "https://*/*" ],
+    "run_at": "document_idle"
+  } ]
+}

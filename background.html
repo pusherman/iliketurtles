@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type="text/javascript" src="fancy-settings/source/lib/store.js"></script>
+<script>
+
+var settings = new Store("settings", {
+  "frequency": 2,
+  "speed": 2 
+});
+
+
+chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+  if (request.action == 'gpmeGetOptions') {
+    sendResponse(settings.toObject());
+  }
+});
+
+</script>
+</head>
+<body>
+</body>
+</html>
