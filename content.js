@@ -1,6 +1,5 @@
 var ilt_Michelangelo = {
   divId : 'ilt_Michelangelo',
-  speed : 7000,
   turtle : { 
     fileName : 'michelangelo.png',
     height : 240,
